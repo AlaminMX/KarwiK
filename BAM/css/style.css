@@ -7,6 +7,12 @@
 	background-blend-mode: overlay;
 }
 */
+Body{
+	background-image: url(Images/Hibiscus-farming-1.jpg);
+	background-size: cover;
+	background-color: black;
+	background-blend-mode:saturation;
+}
 .nav-masthead .nav-link {
   padding: .25rem 0;
   font-weight: 700;
@@ -74,7 +80,6 @@
 	font-size: 40px;
 }
 .dh2{
-	margin-bottom: 3rem;
 }
 .hrop{
 	display: flex;
@@ -82,6 +87,7 @@
 	align-items: center;
 	border: 3px solid #000;
 	margin: 0% 40% 0% 40%;
+	margin-bottom: 3rem;
 }
 .imgo{
 	border-radius: 10%;
@@ -111,6 +117,13 @@
 .lcolor{
 	color: darkred;
 }
+.Nlcolor{
+	color: darkred;
+}
+.Nlcolor:hover{
+	transform: scale(1.05);
+	color: green;
+}
 .flcolor{
 	color: darkred;
 }
@@ -129,7 +142,7 @@
 }
 .lcolor:hover{
 	transform: scale(1.1);
-	color: green;
+	color: #000;
 }
 .bg-dim{
 	background-color: #e1e1e1 !important;
@@ -147,12 +160,23 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background-color: #fff;
 }
 .headimg img{
 	margin-top: 10%;
 	width: 25rem;
 	height: 25rem
+}
+.fcolor{
+	color: white !important;
+	font-size: 20px;
+	font-family: sans-serif
+}
+.fcolor:hover{
+	transform: scale(1.1);
+}
+.limg{
+	width: 60px;
+	height: 65px;
 }
 @media screen and (min-width: 768px){
 	.nav-masthead .nav-link{
@@ -196,3 +220,96 @@
     margin-top: 7rem;
   }
 }
+
+#loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000; /* Semi-transparent white overlay */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+ .flower-container {
+    width: 150px;
+    height: 150px;
+    position: relative;
+    margin: 0 auto;
+    perspective: 500px;
+  }
+
+  .flower {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-style: preserve-3d;
+    animation: spin 4s linear infinite;
+  }
+
+  .petal {
+    width: 50px;
+    height: 100px;
+    background-color: #ff6f61;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    border-radius: 50%;
+    transform-origin: 50% 100%;
+  }
+
+  .petal:nth-child(odd) {
+    transform: rotateY(90deg);
+  }
+
+  .petal:nth-child(even) {
+    transform: rotateY(-90deg);
+  }
+
+/*
+  @keyframes spin {
+    0% { transform: translate(-50%, -50%) rotateY(0deg); }
+	  100% { transform: translate(-50%, -50%) rotateY(360deg); }
+}
+*/
+.main{
+	bottom: 0;
+	background-image: url(Images/1bc4830d7-6f25-4a2e-9634-9e7a0461b420.jpg);
+	background-size: cover;
+	color: white
+}
+.PO{
+	color: white
+}
+.Ohrop{
+	border: 3px solid #fff;
+}
+.fn{
+	background-color: black !important;
+	color: white !important;
+}
+.bgf-gray{
+	background-color: #202020
+}
+.cf{
+	color: dimgray !important
+}
+/*
+.spinner {
+    border: 8px solid #f3f3f3;  Light gray border 
+    border-top: 8px solid #3498db;  Blue border for animation 
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;  Spin animation 
+}
+
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}*/
